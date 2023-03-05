@@ -23,9 +23,12 @@ Mediapipe
 
 ## Files
 O_Dataset_MediaPipe.py: This file is used to create the dataset of student images using MediaPipe
+
 O_Embeddings.py: This file generates embeddings for each student in the dataset using the Facenet model
+
 O_Grading.py: This file contains the code for face recognition and attendance management, as well as the grading system
-License
+
+## License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
 
 Acknowledgements
