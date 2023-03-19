@@ -5,7 +5,7 @@ from PIL import Image as Img
 import numpy as np
 from keras_facenet import FaceNet
 import pickle
-folder = 'training_data1/'
+folder = 'training_data2/'
 database = {}
 
 MyFaceNet = FaceNet()

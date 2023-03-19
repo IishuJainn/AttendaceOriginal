@@ -18,7 +18,7 @@ Roll = input("Enter your roll no: ")
 
 count = 0
 
-assure_path_exists("training_data1/")
+assure_path_exists("training_data2/")
 
 # Load the pre-trained SSD model
 model = cv2.dnn.readNetFromCaffe("deploy.prototxt.txt", "res10_300x300_ssd_iter_140000.caffemodel")
@@ -57,7 +57,7 @@ while cap.isOpened():
 
 
 
-        parent_dir = "training_data1"
+        parent_dir = "training_data2"
         child_dir = str(name)
         if not os.path.exists(parent_dir):
             os.makedirs(path)
@@ -126,13 +126,13 @@ while cap.isOpened():
             # See where the user's head tilting
             count += 1
             if y < -10:
-                cv2.imwrite("training_data1/" + str(name) + 'p' + '.' + str(Roll) + '.' + str(count) + ".jpg",frame[startY:endY, startX:endX])
+                cv2.imwrite("training_data2/" + str(name) + 'p' + '.' + str(Roll) + '.' + str(count) + ".jpg",frame[startY:endY, startX:endX])
 
             elif y > 10:
-                cv2.imwrite("training_data1/" + str(name) + 'p' + '.' + str(Roll) + '.' + str(count) + ".jpg",frame[startY:endY, startX:endX])
+                cv2.imwrite("training_data2/" + str(name) + 'p' + '.' + str(Roll) + '.' + str(count) + ".jpg",frame[startY:endY, startX:endX])
 
             else:
-                cv2.imwrite("training_data1/" + str(name) + 'f' + '.' + str(Roll) + '.' + str(count) + ".jpg",frame[startY:endY, startX:endX])
+                cv2.imwrite("training_data2/" + str(name) + 'f' + '.' + str(Roll) + '.' + str(count) + ".jpg",frame[startY:endY, startX:endX])
 
 
     # Display the image
@@ -143,7 +143,7 @@ while cap.isOpened():
     # Exit the program
     if cv2.waitKey(5) & 0xFF == 27:
         break
-    elif count > 600:
+    elif count > 300:
         break
 cap.release()
 cv2.destroyAllWindows()

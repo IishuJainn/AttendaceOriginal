@@ -88,7 +88,7 @@ while (1):
                         # grades[identity] = 0.0
                         Real_Grade[identity[:-1]]  = 0.2
 
-                cv2.putText(frame, (identity[:-1] + " " + str("{:.2f}".format(Real_Grade[identity[:-1]]))), (startX, startY-10), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 0), 2, cv2.LINE_AA)
+                cv2.putText(frame, (identity[:-1] + " " + str("{:.2f}".format(Real_Grade[identity[:-1]]))), (startX, startY-10), cv2.FONT_HERSHEY_SIMPLEX, .5, (255, 255, 0), 2, cv2.LINE_AA)
                 # cv2.putText(frame, identity, (startX, startY-10), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 0), 2, cv2.LINE_AA)
                 cv2.rectangle(frame, (startX, startY), (endX, endY), (0, 255, 0), 2)
 
